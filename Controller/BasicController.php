@@ -28,13 +28,13 @@ abstract class BasicController
             require_once $head;
             $out = '';
 
-            if(file_exists($tpl = $_SERVER['DOCUMENT_ROOT'] . '/SimpleEngine/View/' . $this->getModelName() . '/' . $method . '.tpl')){// создаём буфер вывода
+            if(file_exists($tpl = $_SERVER['DOCUMENT_ROOT'] . '/SimpleEngine/View/' . $this->getModelName() . '/' . $method . '.tpl')){// СЃРѕР·РґР°С‘Рј Р±СѓС„РµСЂ РІС‹РІРѕРґР°
                 ob_start();
-                // подключаем шаблон
+                // РїРѕРґРєР»СЋС‡Р°РµРј С€Р°Р±Р»РѕРЅ
                 include_once ($tpl);
-                // собрали буфер вывода в переменную
+                // СЃРѕР±СЂР°Р»Рё Р±СѓС„РµСЂ РІС‹РІРѕРґР° РІ РїРµСЂРµРјРµРЅРЅСѓСЋ
                 $out = ob_get_contents();
-                // очистили буфер
+                // РѕС‡РёСЃС‚РёР»Рё Р±СѓС„РµСЂ
                 ob_end_clean();
             }else{
                 $out = '404 :: Can\'t find '.$this->getModelName() .' '.$method;
@@ -42,7 +42,7 @@ abstract class BasicController
 
             require_once $foot;
 
-            // возвращаем сгенерированную страницу
+            // РІРѕР·РІСЂР°С‰Р°РµРј СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ
             return $out;
         }
         else{
