@@ -29,7 +29,8 @@ function autoload($className)
 
     }
     catch (Exception $e) {
-        $e->getMessage();
+        echo 'Поймали исключение<br />';
+        echo 'Сообщение: '   . $e->getMessage() . '<br />';
     }
 }
 
