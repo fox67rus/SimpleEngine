@@ -3,7 +3,7 @@
 // change the following paths if necessary
 
 $config = $_SERVER['DOCUMENT_ROOT'] . '/SimpleEngine/config/main_cnfg.php';
-var_dump($config);
+//var_dump($config);
 
 require_once $config;
 
