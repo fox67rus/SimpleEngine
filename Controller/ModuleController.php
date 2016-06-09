@@ -27,7 +27,7 @@ class ModuleController
         /* Возвращает массив строк, полученных разбиением строки имени класса с использованием "\\" в качестве разделителя. */
         $tmp_path_array = explode("\\", $this->className);
 
-        var_dump($tmp_path_array);
+        //var_dump($tmp_path_array);
 
         $vendor = $tmp_path_array[0]; //"SimpleEngine"
         $type = $tmp_path_array[1]; // "Controller"
