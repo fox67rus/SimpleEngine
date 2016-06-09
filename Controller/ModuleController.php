@@ -23,6 +23,8 @@ class ModuleController
     public function load()
     {
         $file = null;
+
+        /* Возвращает массив строк, полученных разбиением строки имени класса с использованием "\\" в качестве разделителя. */
         $tmp_path_array = explode("\\", $this->className);
         $vendor = $tmp_path_array[0];
         $type = $tmp_path_array[1];
