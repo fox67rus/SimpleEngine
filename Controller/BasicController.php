@@ -30,6 +30,9 @@ abstract class BasicController
 
             if(file_exists($tpl = $_SERVER['DOCUMENT_ROOT'] . '/SimpleEngine/View/' . $this->getModelName() . '/' . $method . '.tpl')){// создаём буфер вывода
                 ob_start();
+
+                //var_dump($tpl);
+
                 // подключаем шаблон
                 include_once ($tpl);
                 // собрали буфер вывода в переменную
