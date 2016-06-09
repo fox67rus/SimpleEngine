@@ -26,9 +26,12 @@ class ModuleController
 
         /* Возвращает массив строк, полученных разбиением строки имени класса с использованием "\\" в качестве разделителя. */
         $tmp_path_array = explode("\\", $this->className);
-        $vendor = $tmp_path_array[0];
-        $type = $tmp_path_array[1];
-        $class = $tmp_path_array[2];
+
+        var_dump($tmp_path_array);
+
+        $vendor = $tmp_path_array[0]; //"SimpleEngine"
+        $type = $tmp_path_array[1]; // "Controller"
+        $class = $tmp_path_array[2]; //"AppController"
 
         if($vendor == APP_VENDOR && file_exists( $_SERVER['DOCUMENT_ROOT'] . "/" . $vendor. "/" .$type. "/" . $class . '.php' )) {
             // calling controller
